@@ -3,3 +3,18 @@
     display: flex;
     justify-content: space-between
 }
+
+#right-nav {
+    display: flex;
+    padding: 1em;
+}
+
+#nav-search, #nav-saved {
+    font-size: 2em;
+    margin: 0px 1em;
+    color: white;
+}
+
+#nav-search:hover, #nav-saved:hover {
+    text-shadow: 0 0 50px #24383F;
+}

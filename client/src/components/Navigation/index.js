@@ -10,9 +10,8 @@ function Navigation () {
            
         </div>
         <div id="right-nav">
-           <div>Search</div>
-           <div>Saved</div>
-           <button className="data-uk-button">Hi</button>
+           <div id="nav-search">search</div>
+           <div id="nav-saved">saved</div>
         </div>
        </nav>
     )
