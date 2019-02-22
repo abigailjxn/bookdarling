@@ -1,0 +1,5 @@
+#navbar {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-between
+}

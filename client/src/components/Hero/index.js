@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./style.css";
 import Navigation from "../Navigation";
+import UIKit from "uikit";
 
 function Hero () {
     return (
-        <div className="data-uk-position-relative">
-            <img id="hero-img" src="/images/library.jpg" />
+        <div className="hero-img">
+           
             <Navigation />
-            <button className="data-uk-button data-uk-button-default">Default</button>
+           
         </div>
     )
 }
