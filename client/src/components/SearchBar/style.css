@@ -1,0 +1,32 @@
+.searchbar {
+    text-align: center;
+    margin-top: 15em;
+
+}
+
+#search-query {
+    font-family: Raleway, sans-serif;
+
+    outline:none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+
+    font-size: 4em;
+    width: 80vw;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.searchbar i {
+    color: white;
+    font-size: 5em;
+}
+
+.searchbar button {
+    background: transparent;
+    border: none;
+}

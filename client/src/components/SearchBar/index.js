@@ -12,18 +12,22 @@ class SearchBar extends Component {
             [name]:value
         });
     };
-    //handleSubmit
+    handleSubmit = event => {
+        event.preventDefault();
+        console.log(this.state.query)
+    }
 
     render() {
         return (
-            <div>
-                <form>
+            <div className="searchbar">
+                <form id="search-form">
                     <input id="search-query"
                         value={this.state.query}
                         name="query"
                         onChange={this.handleInputChange}
                         type="text"
-                        placeholder="milk and honey by rupi kaur"/>
+                        placeholder="the sun and her flowers"/>
+                    <button onSubmit={this.handleSubmit}><i className="fas fa-arrow-right"></i></button>
                 </form>
             </div>
         )
