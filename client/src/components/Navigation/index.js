@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.css";
-import UIkit from "uikit";
+
 
 function Navigation () {
     return (
