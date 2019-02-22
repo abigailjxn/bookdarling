@@ -10,8 +10,8 @@ function Navigation () {
            
         </div>
         <div id="right-nav">
-           <div id="nav-search">search</div>
-           <div id="nav-saved">saved</div>
+           <a id="nav-search">search</a>
+           <a id="nav-saved">saved</a>
         </div>
        </nav>
     )
