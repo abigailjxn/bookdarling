@@ -3,6 +3,11 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// MONGO DATABASE
+const mongoose = require("mongoose");
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/bookdarling";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
