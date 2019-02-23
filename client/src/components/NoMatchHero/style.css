@@ -21,6 +21,7 @@
     font-family: Raleway, sans-serif;
     color: white;
     font-weight: 400;
+    text-decoration: none;
 
     display: flex;
     align-items: center;
@@ -30,9 +31,9 @@
     padding-left: 1em;
 }
 
-#no-match-link:hover {
-    /* color: black; */
-}
+/* #no-match-link:hover {
+    color: black;
+} */
 
 .svg-icon.arrow-svg:hover polygon{
     fill: black;

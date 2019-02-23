@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./style.css";
 
 
@@ -10,8 +11,8 @@ function Navigation () {
            
         </div>
         <div id="right-nav">
-           <a id="nav-search">search</a>
-           <a id="nav-saved">saved</a>
+           <Link to="/" id="nav-search">search</Link>
+           <Link to="/books" id="nav-saved">saved</Link>
         </div>
        </nav>
     )

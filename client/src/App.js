@@ -13,7 +13,7 @@ class App extends Component {
           <Switch>
               <Route exact path="/" component={Search} />
               <Route exact path="/books" component={Saved} />
-              <Route exact path="/books" component={Detail} />
+              <Route exact path="/books/:id" component={Detail} />
               <Route component={NoMatch} />
           </Switch>
          
