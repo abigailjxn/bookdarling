@@ -11,8 +11,8 @@ function NoMatchHero () {
             <div id="no-match-content">
                 <h2 id="no-match-text">there's nothing like that here, dear.</h2>
                 <a id="no-match-link">
-                    <BackArrow  width={100}/>
-                    back
+                    <BackArrow  width={100} className="arrow-svg"/>
+                    <p>back</p>
                 </a>
 
             </div>

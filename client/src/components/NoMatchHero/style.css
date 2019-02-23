@@ -22,12 +22,18 @@
     color: white;
     font-weight: 400;
 
+    display: flex;
+    align-items: center;
+}
+
+#no-match-link p {
+    padding-left: 1em;
 }
 
 #no-match-link:hover {
-    color: black;
+    /* color: black; */
 }
 
-#arrow-svg {
-    color: black;
+.svg-icon.arrow-svg:hover polygon{
+    fill: black;
 }
