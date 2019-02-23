@@ -1,0 +1,22 @@
+.no-match-hero-img {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/no-match.jpg")
+}
+
+#no-match-content{
+    position: absolute;
+}
+
+#no-match-text {
+    font-family: Raleway, sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+#no-match-link {
+    font-family: Raleway, sans-serif;
+    color: white;
+    font-weight: 400;
+
+}
