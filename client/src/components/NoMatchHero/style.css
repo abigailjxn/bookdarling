@@ -6,6 +6,9 @@
 
 #no-match-content{
     position: absolute;
+    top: 25%;
+    left: 55%;
+
 }
 
 #no-match-text {
@@ -19,4 +22,12 @@
     color: white;
     font-weight: 400;
 
+}
+
+#no-match-link:hover {
+    color: black;
+}
+
+#arrow-svg {
+    color: black;
 }

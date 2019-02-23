@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./style.css";
 import Navigation from "../Navigation";
+import BackArrow from "../BackArrow";
 
 
 function NoMatchHero () {
@@ -10,7 +11,7 @@ function NoMatchHero () {
             <div id="no-match-content">
                 <h2 id="no-match-text">there's nothing like that here, dear.</h2>
                 <a id="no-match-link">
-                    //arrow
+                    <BackArrow  width={100}/>
                     back
                 </a>
 
