@@ -13,9 +13,9 @@
     font-size: 2em;
     margin: 0px 1em;
     color: white;
+    transition: transform .2s;
 }
 
 #nav-search:hover, #nav-saved:hover {
-    text-shadow: 0 0 50px #24383F;
-    color:  #e8eaea;
+    transform: scale(1.1);
 }
