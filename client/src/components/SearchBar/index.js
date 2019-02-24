@@ -19,6 +19,7 @@ class SearchBar extends Component {
     };
     handleSubmit = event => {
         event.preventDefault();
+        // change query to RegEx for GoogleBooks API Reqest
         console.log(this.state.query)
     }
 
