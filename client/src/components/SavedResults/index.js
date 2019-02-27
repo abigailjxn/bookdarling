@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from "../../utils/API";
-import Navigation from "../Navigation";
+
 
 
 class SavedResults extends Component {
@@ -38,12 +38,12 @@ class SavedResults extends Component {
 
   render() {
     return (
-      <div id="saved-hero-img">
-        <Navigation />
+      <div >
+       
         //include star button for update book
         // include delete button for deleting book
         // include details route to get details for book
-        <div>working</div>
+        <div></div>
 
       </div>
     );
