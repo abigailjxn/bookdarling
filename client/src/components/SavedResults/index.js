@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import "./style.css";
 import API from "../../utils/API";
+import Navigation from "../Navigation";
 
 
 class SavedResults extends Component {
@@ -19,7 +21,7 @@ class SavedResults extends Component {
       .catch(err => console.log(err));
   };
 
-  updateBook = () => {
+  updateBook = (id, bookData) => {
     API.updateBook(id, bookData)
     .then(res => 
       this.setState({books: res.data})
@@ -36,10 +38,14 @@ class SavedResults extends Component {
 
   render() {
     return (
-      //include star button for update book
-      // include delete button for deleting book
-      // include details route to get details for book
-      <div>working</div>
+      <div id="saved-hero-img">
+        <Navigation />
+        //include star button for update book
+        // include delete button for deleting book
+        // include details route to get details for book
+        <div>working</div>
+
+      </div>
     );
   }
 }

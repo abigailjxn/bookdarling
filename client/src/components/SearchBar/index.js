@@ -7,7 +7,7 @@ const apiKey = process.env.API_Key;
 class SearchBar extends Component {
     state = {
         query: "",
-        
+
     };
     
     queryString = `https://www.googleapis.com/books/v1/volumes?q=${this.state.query}?key=${apiKey}`;
