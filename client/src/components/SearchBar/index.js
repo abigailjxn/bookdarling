@@ -1,11 +1,13 @@
 import React, {Component} from "react";
 import styles from "./style.css";
+import API from "../../utils/API";
 
 const apiKey = process.env.API_Key;
 
 class SearchBar extends Component {
     state = {
-        query: ""
+        query: "",
+        
     };
     
     queryString = `https://www.googleapis.com/books/v1/volumes?q=${this.state.query}?key=${apiKey}`;

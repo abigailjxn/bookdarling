@@ -5,9 +5,6 @@ import API from "../../utils/API";
 class SavedResults extends Component {
   state = {
     books: [],
-    title: "",
-    author: "",
-    synopsis: ""
   };
 
   componentDidMount() {
@@ -17,7 +14,15 @@ class SavedResults extends Component {
   loadBooks = () => {
     API.getSavedBooks()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data })
+      )
+      .catch(err => console.log(err));
+  };
+
+  updateBook = () => {
+    API.updateBook(id, bookData)
+    .then(res => 
+      this.setState({books: res.data})
       )
       .catch(err => console.log(err));
   };
@@ -31,6 +36,9 @@ class SavedResults extends Component {
 
   render() {
     return (
+      //include star button for update book
+      // include delete button for deleting book
+      // include details route to get details for book
       <div>working</div>
     );
   }
