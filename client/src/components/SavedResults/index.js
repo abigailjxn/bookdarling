@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from "../../utils/API";
+import { Link } from "react-router-dom";
 
 
 
@@ -43,7 +44,15 @@ class SavedResults extends Component {
         //include star button for update book
         // include delete button for deleting book
         // include details route to get details for book
-        <div></div>
+        <div id="saved-book-container">
+          {this.state.books.map(book => (
+             <div id="saved-book-square" key={book._id}>
+                <Link to={"/books/" + book._id}>
+                  <div>{book.title} {book.author}</div>
+                </Link>
+             </div>
+          ))}
+        </div>
 
       </div>
     );
