@@ -16,7 +16,12 @@
     font-weight: 100;
 }
 
-#saved
+#saved-book-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+}
 
 
 #saved-book-square {

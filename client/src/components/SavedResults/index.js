@@ -39,10 +39,9 @@ class SavedResults extends Component {
           {this.state.books.map(book => (
             <div id="saved-book-square" key={book._id}>
               <Link to={"/books/" + book._id}>
-                <img className="book-img" src={book.image}> 
-               </img>
-               <div>{book.author}</div>
-                  <title>{book.title}</title>
+                <img className="book-img" src={book.image} />
+                <div>{book.author}</div>
+                <title>{book.title}</title>
               </Link>
             </div>
           ))}
