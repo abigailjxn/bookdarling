@@ -42,6 +42,7 @@ class SavedResults extends Component {
             <div id="saved-book-square"  key={book._id}>
               <Link to={"/books/" + book._id}>
                 <img className="book-img" src={book.image} />
+                <div id="saved-book-x">x</div>
                 <div id="saved-book-text">
                   <div id="saved-book-author">{book.author}</div>
                   <div id="saved-book-title">{book.title}</div>
