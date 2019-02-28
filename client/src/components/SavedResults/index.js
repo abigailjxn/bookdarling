@@ -3,11 +3,9 @@ import "./style.css";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 
-
-
 class SavedResults extends Component {
   state = {
-    books: [],
+    books: []
   };
 
   componentDidMount() {
@@ -16,17 +14,13 @@ class SavedResults extends Component {
 
   loadBooks = () => {
     API.getSavedBooks()
-      .then(res =>
-        this.setState({ books: res.data })
-      )
+      .then(res => this.setState({ books: res.data }))
       .catch(err => console.log(err));
   };
 
   updateBook = (id, bookData) => {
     API.updateBook(id, bookData)
-    .then(res => 
-      this.setState({books: res.data})
-      )
+      .then(res => this.setState({ books: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -36,24 +30,23 @@ class SavedResults extends Component {
       .catch(err => console.log(err));
   };
 
-
   render() {
     return (
-      <div >
-       
-        //include star button for update book
-        // include delete button for deleting book
-        // include details route to get details for book
+      <div>
+        {/* //include star button for update book // include delete button for
+        deleting book // include details route to get details for book */}
         <div id="saved-book-container">
           {this.state.books.map(book => (
-             <div id="saved-book-square" key={book._id}>
-                <Link to={"/books/" + book._id}>
-                  <div>{book.title} {book.author}</div>
-                </Link>
-             </div>
+            <div id="saved-book-square" key={book._id}>
+              <Link to={"/books/" + book._id}>
+                <img className="book-img" src={book.image}> 
+               </img>
+               <div>{book.author}</div>
+                  <title>{book.title}</title>
+              </Link>
+            </div>
           ))}
         </div>
-
       </div>
     );
   }
