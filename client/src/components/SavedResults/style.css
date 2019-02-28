@@ -21,6 +21,7 @@
     width: 100%;
 
     display: flex;
+    
 }
 
 
@@ -28,6 +29,18 @@
     height: 15em;
     width: 15em;
     border: 1px solid white;
+    position: relative;
+}
+
+#saved-book-text {
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: white;
 }
 
 .book-img{
