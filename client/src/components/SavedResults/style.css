@@ -30,6 +30,14 @@
     width: 15em;
     border: 1px solid white;
     position: relative;
+
+    border-radius: 3px;
+
+    transition: transform .2s;
+}
+
+#saved-book-square:hover {
+    transform: scale(1.1);
 }
 
 #saved-book-text {
@@ -53,8 +61,11 @@
 
     padding: .5em;
     color: white;
-    
+
+    transition: transform .2s; 
 }
+
+
 
 .book-img{
     height: 100%;
