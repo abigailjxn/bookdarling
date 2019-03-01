@@ -3,7 +3,6 @@ import "./style.css";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 
-
 class SavedResults extends Component {
   state = {
     books: []
@@ -31,7 +30,6 @@ class SavedResults extends Component {
       .catch(err => console.log(err));
   };
 
-
   render() {
     return (
       <div>
@@ -39,15 +37,19 @@ class SavedResults extends Component {
         deleting book // include details route to get details for book */}
         <div id="saved-book-container">
           {this.state.books.map(book => (
-            <div id="saved-book-square"  key={book._id}>
+            <div id="saved-book-square" key={book._id}>
               <Link to={"/books/" + book._id}>
                 <img className="book-img" src={book.image} />
-                <div id="saved-book-x">x</div>
+
                 <div id="saved-book-text">
                   <div id="saved-book-author">{book.author}</div>
                   <div id="saved-book-title">{book.title}</div>
+                  <div id="saved-book-star"><i class="fas fa-star"></i></div>
                 </div>
               </Link>
+              <button
+                id="saved-book-x"
+                onClick={() => this.deleteBook(book._id)}>x</button>
             </div>
           ))}
         </div>

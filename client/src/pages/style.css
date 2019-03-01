@@ -1,0 +1,14 @@
+.content-container {
+    font-family: Raleway, sans-serif;
+    color: white;
+    font-weight: 100;
+}
+
+#detail-book-title, #detail-book-author {
+    font-weight: 100;
+}
+
+#detail-book-title {
+    font-size: 5em;
+    color: rgba(red, green, rgba(150, 150, 150, 0.473), alpha)
+}

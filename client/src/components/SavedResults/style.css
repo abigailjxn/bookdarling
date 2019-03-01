@@ -28,10 +28,11 @@
 #saved-book-square {
     height: 15em;
     width: 15em;
-    border: 1px solid white;
-    position: relative;
-
+    border: 2px solid white;
     border-radius: 3px;
+    margin: 0 .5em;
+
+    position: relative;
 
     transition: transform .2s;
 }
@@ -61,11 +62,23 @@
 
     padding: .5em;
     color: white;
+    background-color: rgba(146, 146, 146, 0.527);
+
+    border: none;
 
     transition: transform .2s; 
 }
 
+#saved-book-star{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .5em;
+}
 
+#saved-book-star:hover {
+    color: gold;
+}
 
 .book-img{
     height: 100%;
