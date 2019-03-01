@@ -2,13 +2,34 @@
     font-family: Raleway, sans-serif;
     color: white;
     font-weight: 100;
+
+}
+
+#book-data {
+    background-color: rgba(124, 124, 124, 0.2);
+    border-radius: 3px;
+    padding: 1.5em;
+
 }
 
 #detail-book-title, #detail-book-author {
     font-weight: 100;
+    margin-top: 0;
 }
 
 #detail-book-title {
-    font-size: 5em;
-    color: rgba(red, green, rgba(150, 150, 150, 0.473), alpha)
+    margin-bottom: 0;
+    font-size: 3em;
+}
+
+#detail-book-author {
+    font-size: 2em;
+}
+
+.fa-star:hover{
+color: gold;
+}
+
+#detail-delete:hover {
+    color: black;
 }
