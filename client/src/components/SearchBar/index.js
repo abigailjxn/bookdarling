@@ -13,15 +13,15 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="searchbar">
-                <form id="search-form">
+                <form id="search-form" onSubmit={this.props.handleSubmit}>
                     <input id="search-query"
                         value={this.props.query}
                         name="query"
                         onChange={this.props.handleInputChange}
                         type="text"
                         placeholder="the sun and her flowers"/>
-                    <button onSubmit={this.props.handleSubmit}><i className="fas fa-arrow-right"></i></button>
-                </form>
+                    <button type="submit"><i className="fas fa-arrow-right"></i></button>
+                </form >
             </div>
         )
     }

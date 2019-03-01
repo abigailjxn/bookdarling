@@ -23,9 +23,9 @@ class Search extends Component {
         event.preventDefault();
         fetch(this.queryString)
         .then(results => {
-            return results.json();
+            this.setState({searchResults: results.json()}) ;
         })
-        .then(data => this.setState({searchResults: data}))
+        // .then(data => this.setState({searchResults: data}))
         // change query to RegEx for GoogleBooks API Reqest
         console.log(this.state.query)
     }
