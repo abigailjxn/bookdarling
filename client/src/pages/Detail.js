@@ -9,8 +9,6 @@ const detailHeroStyles = {
   backgroundImage: "url('/images/detail.jpg')"
 };
 
-const contentStyles = {};
-
 class Detail extends Component {
   state = {
     book: {}
@@ -26,7 +24,7 @@ class Detail extends Component {
     return (
       <div id="detail-hero-img" style={detailHeroStyles}>
         <Navigation />
-        <body className="content-container" style={contentStyles}>
+        <body className="content-container">
           <h1 id="saved-header">DETAILS</h1>
           <div id="book-data">
             <h2 id="detail-book-title">{this.state.book.title}</h2>
