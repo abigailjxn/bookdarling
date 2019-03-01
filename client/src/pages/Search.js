@@ -1,17 +1,16 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Hero from "../components/Hero";
-import SearchReults from "../components/SearchResults";
+import SearchResults from "../components/SearchResults";
 
 class Search extends Component {
-
-
-    render() {
-        return(
-            <Hero />
-
-            // SearchResults Coponent
-        )
-    }
+  render() {
+    return (
+      <div>
+        <Hero />
+        <SearchResults />
+      </div>
+    );
+  }
 }
 
 export default Search;
