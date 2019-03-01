@@ -8,8 +8,6 @@ class SearchResults extends Component {
     books: []
   };
 
-// INCLUDE GOOGLE API INTEGRATION HERE
-
   componentDidMount() {
     this.loadBooks();
   }

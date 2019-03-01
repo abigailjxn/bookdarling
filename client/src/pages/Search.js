@@ -34,7 +34,7 @@ class Search extends Component {
     return (
       <div>
         <Hero handleInputChange={this.handleInputChange} query={this.state.query} handleSubmit={this.handleSubmit}/>
-        <SearchResults />
+        <SearchResults searchResults={this.state.searchResults}/>
       </div>
     );
   }
