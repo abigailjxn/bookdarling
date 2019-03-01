@@ -13,7 +13,7 @@ class Hero extends Component  {
         return (
             <div className="hero-img">
                 <Navigation />
-               <SearchBar handleInputChange={this.props.handleInputChange} query={this.props.query}/>
+               <SearchBar handleInputChange={this.props.handleInputChange} query={this.props.query} handleSubmit={this.props.handleSubmit}/>
             </div>
         )
 
