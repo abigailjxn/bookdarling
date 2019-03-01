@@ -31,7 +31,8 @@ class Detail extends Component {
             <h3 id="detail-book-author">{this.state.book.author}</h3>
             <p>{this.state.book.description}</p>
             <span>
-              <i className="fas fa-star" /> | <span id="detail-delete">delete</span>
+              {/* <i className="fas fa-star" /> */}
+              {/* <span id="detail-delete">delete</span> */}
             </span>
           </div>
         </body>

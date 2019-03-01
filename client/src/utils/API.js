@@ -10,5 +10,5 @@ export default {
   // Update Book in Mongo DB
   updateBook: (id, bookData) => axios.put("/api/books/" + id, bookData),
   // Delete Boo from Mongo DB
-  deleteBook: (id) => axios.delete("/api/books" + id)
+  deleteBook: (id) => axios.delete("/api/books/" + id)
 };
