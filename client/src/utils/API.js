@@ -14,5 +14,5 @@ export default {
   updateBook: (id, bookData) => axios.put("/api/books/" + id, bookData),
   // Delete Boo from Mongo DB
   deleteBook: (id) => axios.delete("/api/books/" + id),
-  searchBooks: (query) => axios.get("https://www.googleapis.com/books/v1/volumes?q=1q84&key=" + apiKey + "&maxResults=25")
+  searchBooks: (query) => axios.get("https://www.googleapis.com/books/v1/volumes?q="+ "1q84"+"&key=" + "" + "&maxResults=25")
 };
