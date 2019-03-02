@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import Hero from "../components/Hero";
 import SearchResults from "../components/SearchResults";
 
@@ -7,12 +8,14 @@ const apiKey = process.env.API_Key;
 console.log(apiKey);
 
 class Search extends Component {
-    state = {
-        query: "",
-        searchResults: [],
-        apiKey: apiKey
-    };
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            query: "",
+            searchResults: [],
+            apiKey: apiKey
+        };
+    }
     
 
      queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=" + "AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
@@ -24,15 +27,29 @@ class Search extends Component {
         });
     }; 
 
+    componentDidMount() {
+        this.handleSubmit();
+    }
+
       handleSubmit = event => {
-        event.preventDefault();
-        fetch(this.queryString)
-        .then(results => {
-            this.setState({searchResults: results.json()}) ;
+        // event.preventDefault();
+        axios.get(this.queryString)
+        // fetch(this.queryString)
+        .then(res => {
+            let result = res.json;
+            this.setState({
+                searchResults: result
+            })
+            // return res.json();
         })
+        // .then(result => {
+        //     this.setState({searchResults: result})
+        // });
+
         // .then(data => this.setState({searchResults: data}))
         // change query to RegEx for GoogleBooks API Reqest
-        console.log(this.state.query)
+        // console.log(this.state.query);
+        // console.log(this.state.searchResults);
     }
 
   render() {
