@@ -18,7 +18,7 @@ class Search extends Component {
     }
     
 
-     queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=" + "AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
+     queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
 
     handleInputChange = event => {
         const {name, value} = event.target;
@@ -34,11 +34,9 @@ class Search extends Component {
       handleSubmit = event => {
         // event.preventDefault();
         axios.get(this.queryString)
-        // fetch(this.queryString)
         .then(res => {
-            let result = res.json;
             this.setState({
-                searchResults: result
+                searchResults: res
             })
             // return res.json();
         })
