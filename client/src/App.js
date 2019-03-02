@@ -4,6 +4,8 @@ import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
+import dotenv from "dotenv";
+dotenv.config();
 
 class App extends Component {
   render() {

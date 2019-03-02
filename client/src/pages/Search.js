@@ -5,8 +5,8 @@ import SearchResults from "../components/SearchResults";
 import API from "../utils/API";
 
 
-const apiKey = process.env.REACT_APP_API_Key;
-console.log(apiKey);
+// const apiKey = process.env.REACT_APP_API_Key;
+// console.log(apiKey);
 
 class Search extends Component {
     constructor(props) {
@@ -14,11 +14,11 @@ class Search extends Component {
         this.state = {
             query: "",
             searchResults: [],
-            apiKey: apiKey
+            // apiKey: apiKey
         };
     }
 
-     queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
+    //  queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
 
     handleInputChange = event => {
         const {name, value} = event.target;
@@ -32,7 +32,7 @@ class Search extends Component {
     }
 
       handleSubmit = event => {
-        API.searchBooks()
+        API.searchBooks(this.state.query)
         .then(res => this.setState({ searchResults: res.data }))
         .catch(err => console.log(err));
         // axios.get(this.queryString)

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const apiKey = process.env.REACT_APP_API_Key;
+console.log(apiKey);
 
 export default {
   // Get Saved Books from Mongo DB
