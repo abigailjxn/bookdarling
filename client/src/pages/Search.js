@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import Hero from "../components/Hero";
 import SearchResults from "../components/SearchResults";
+import API from "../utils/API";
 
 
-const apiKey = process.env.API_Key;
+const apiKey = process.env.REACT_APP_API_Key;
 console.log(apiKey);
 
 class Search extends Component {
@@ -16,7 +17,6 @@ class Search extends Component {
             apiKey: apiKey
         };
     }
-    
 
      queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
 
@@ -32,17 +32,15 @@ class Search extends Component {
     }
 
       handleSubmit = event => {
-        // event.preventDefault();
-        axios.get(this.queryString)
-        .then(res => {
-            this.setState({
-                searchResults: res
-            })
-            // return res.json();
-        })
-        // .then(result => {
-        //     this.setState({searchResults: result})
-        // });
+        API.searchBooks()
+        .then(res => this.setState({ searchResults: res.data }))
+        .catch(err => console.log(err));
+        // axios.get(this.queryString)
+        // .then(res => {
+        //     this.setState({
+        //         searchResults: res
+        //     })
+        // })
 
         // .then(data => this.setState({searchResults: data}))
         // change query to RegEx for GoogleBooks API Reqest
