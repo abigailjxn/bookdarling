@@ -2,15 +2,20 @@ import React, { Component } from "react";
 import Hero from "../components/Hero";
 import SearchResults from "../components/SearchResults";
 
+
 const apiKey = process.env.API_Key;
+console.log(apiKey);
 
 class Search extends Component {
     state = {
         query: "",
-        searchResults: []
+        searchResults: [],
+        apiKey: apiKey
     };
 
-     queryString = `https://www.googleapis.com/books/v1/volumes?q=${this.state.query}&key=${apiKey}&maxResults=25`;
+    
+
+     queryString = "https://www.googleapis.com/books/v1/volumes?q=1q84&key=" + "AIzaSyDn_KvhMNLVAGWyQQS99HIuPZXDluwSU18&maxResults=25";
 
     handleInputChange = event => {
         const {name, value} = event.target;
