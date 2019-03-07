@@ -57,29 +57,7 @@ class Search extends Component {
           query={this.state.query}
           handleSubmit={this.handleSubmit}
         />
-        {/* <SearchResults searchResults={this.state.searchResults}/> */}
-        <div id="saved-book-container">
-          {this.state.searchResults.items && 
-              this.state.searchResults.items.map(book => {
-                let imageLink = book.volumeInfo.imageLinks.smallThumbnail;
-
-             return (
-            <div id="saved-book-square" key={book.id}>
-              <img
-                className="book-img"
-                src={imageLink}
-              />
-              <div id="saved-book-text">
-                <div id="saved-book-author">{book.volumeInfo.authors}</div>
-                <div id="saved-book-title">{book.volumeInfo.title}</div>
-
-                <div id="saved-book-star">
-                  <i className="fas fa-star" />
-                </div>
-              </div>
-            </div>)
-              })}
-        </div>
+        <SearchResults results={this.state.searchResults} />
       </div>
     );
   }
