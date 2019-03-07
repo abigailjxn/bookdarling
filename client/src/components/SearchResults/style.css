@@ -10,9 +10,6 @@
 
 }
 #search-book-container {
-    /* height: 100%;
-    width: 100%; */
-
     display: flex;
     flex-wrap: wrap;
     align-content: justify;
@@ -63,9 +60,4 @@
 
 #search-book-bookmark:hover {
     color: paleturquoise;
-}
-
-.book-img{
-    height: 100%;
-    width:100%;
 }

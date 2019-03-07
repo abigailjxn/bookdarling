@@ -44,7 +44,7 @@ class SavedResults extends Component {
                 <div id="saved-book-text">
                   <div id="saved-book-author">{book.author}</div>
                   <div id="saved-book-title">{book.title}</div>
-                  <div id="saved-book-star"><i class="fas fa-star"></i></div>
+                  <div id="saved-book-star" ><i class="fas fa-star"></i></div>
                 </div>
               </Link>
               <button
