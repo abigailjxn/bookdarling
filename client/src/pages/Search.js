@@ -60,13 +60,15 @@ class Search extends Component {
         {/* <SearchResults searchResults={this.state.searchResults}/> */}
         <div id="saved-book-container">
           {this.state.searchResults.items && 
-              this.state.searchResults.items.map(book => (
-             
+              this.state.searchResults.items.map(book => {
+                let imageLink = book.volumeInfo.imageLinks.smallThumbnail;
+
+             return (
             <div id="saved-book-square" key={book.id}>
-              {/* <img
+              <img
                 className="book-img"
-                alt={book.volumeInfo.imageLinks.thumbnail}
-              /> */}
+                src={imageLink}
+              />
               <div id="saved-book-text">
                 <div id="saved-book-author">{book.volumeInfo.authors}</div>
                 <div id="saved-book-title">{book.volumeInfo.title}</div>
@@ -75,8 +77,8 @@ class Search extends Component {
                   <i className="fas fa-star" />
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)
+              })}
         </div>
       </div>
     );
