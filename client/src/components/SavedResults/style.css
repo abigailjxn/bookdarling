@@ -21,9 +21,9 @@
     width: 100%;
 
     display: flex;
-    
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
-
 
 #saved-book-square {
     height: 15em;

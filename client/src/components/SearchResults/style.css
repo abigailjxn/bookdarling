@@ -1,0 +1,61 @@
+#search-header {
+    color: grey;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+#search-book-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#search-book-square {
+    height: 12em;
+    width: 12em;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin: 0 .5em;
+
+    position: relative;
+
+    transition: transform .2s;
+}
+
+#search-book-square:hover {
+    transform: scale(1.1);
+}
+
+#search-book-text {
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+
+    padding: .5em;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.247);
+}
+
+#search-book-bookmark{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .5em;
+}
+
+#search-book-bookmark:hover {
+    color: paleturquoise;
+}
+
+.book-img{
+    height: 100%;
+    width:100%;
+}

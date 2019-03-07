@@ -12,7 +12,8 @@ class SearchResults extends Component {
     return (
       <div>
         {/* //include heart for saving book, results just need to be able to render and be saved*/}
-        <div id="saved-book-container">
+        <h1 id="search-header">Search Results</h1>
+        <div id="search-book-container">
                 {this.props.results.items && this.props.results.items.map(book => {
                         // Need to include if statement to account for res with no thumbnail link
                         //   if (book.volumeInfo.imageLinks.thumbnail = undefined || null) {
@@ -20,17 +21,18 @@ class SearchResults extends Component {
                         //   } else {
                         let imageLink = book.volumeInfo.imageLinks.thumbnail
                         return (
-                            <div id="saved-book-square" key={book.id}>
+                            <div id="search-book-square" key={book.id}>
                                 <img
                                     className="book-img"
                                     src={imageLink}
                                 />
-                                <div id="saved-book-text">
-                                    <div id="saved-book-author">{book.volumeInfo.authors}</div>
-                                    <div id="saved-book-title">{book.volumeInfo.title}</div>
+                                <div id="search-book-text">
+                                {/* Add logic to add spaces between array indices  */}
+                                    <div id="search-book-author">{book.volumeInfo.authors}</div>
+                                    <div id="search-book-title">{book.volumeInfo.title}</div>
 
-                                    <div id="saved-book-star">
-                                        <i className="fas fa-star" />
+                                    <div id="search-book-bookmark">
+                                        <i className="fas fa-bookmark"/>
                                     </div>
                                 </div>
                             </div>
