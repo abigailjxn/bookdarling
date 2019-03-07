@@ -12,7 +12,7 @@ class Search extends Component {
     super(props);
     this.state = {
       query: "",
-      searchResults: []
+      searchResults: {}
       // apiKey: apiKey
     };
   }
@@ -58,18 +58,18 @@ class Search extends Component {
           handleSubmit={this.handleSubmit}
         />
         {/* <SearchResults searchResults={this.state.searchResults}/> */}
-        {/* <div id="saved-book-container">
-          {this.state.searchResults.items.map(book => (
+        <div id="saved-book-container">
+          {this.state.searchResults.items && 
+              this.state.searchResults.items.map(book => (
              
             <div id="saved-book-square" key={book.id}>
-              <img
+              {/* <img
                 className="book-img"
-                src={book.volumeInfo.imageLinks.thumbnail}
-              />
-
+                alt={book.volumeInfo.imageLinks.thumbnail}
+              /> */}
               <div id="saved-book-text">
-                <div id="saved-book-author">{book.author}</div>
-                <div id="saved-book-title">{book.title}</div>
+                <div id="saved-book-author">{book.volumeInfo.authors}</div>
+                <div id="saved-book-title">{book.volumeInfo.title}</div>
 
                 <div id="saved-book-star">
                   <i className="fas fa-star" />
@@ -77,7 +77,7 @@ class Search extends Component {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     );
   }
